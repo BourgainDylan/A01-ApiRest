@@ -3,14 +3,29 @@
     margin:0;
     box-sizing: border-box;
 }
-.container{
+body{
+
+    background:url(./img/info-img.jpg);
+    background-size: cover;
+
+}
+.nav{
+    height:15vh;
     width:100%;
-    height:100vh;
+    box-shadow: 2px 2px 19px 0px rgb(160, 160, 160);
     display:flex;
     align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
+    justify-content: flex-end;
 
+
+}
+.container{
+    width:100%;
+    height:85vh;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    
 }
 
 .container-login{
@@ -22,12 +37,22 @@
     flex-direction: column;
 }
 
-.form{
+.log-container{
+    margin-top:20px;
     display:flex;
     align-items: center;
-    flex-direction: column;
     justify-content: center;
-    height:100%;
+    flex-direction: column;
+}
+
+.form{
+    display:flex;
+    flex-direction: column;
+    margin-top: 50px;
+    box-shadow: 2px 2px 19px 0px rgba(82,82,82,1);
+    padding: 20px;
+    width: 25%;
+    align-items: center;
     
 }
 
@@ -36,15 +61,177 @@
     padding:5px;
 }
 
-.form input{
+.connexionInput{
     margin-bottom: 5px;
     padding:5px;
+    border:none;
+    border-bottom: solid rgb(218, 188, 21) 2px;
+    background: transparent;
+    text-decoration: none;
+    outline: none;
 }
 
-.form button{
+.subscribeInput{
+    margin-bottom: 5px;
+    padding:5px;
+    border:none;
+    border-bottom: solid rgb(37, 218, 21) 2px;
+    background: transparent;
+    text-decoration: none;
+    outline: none;
+}
+
+
+.connection{
     margin-top:10px;
     padding:5px;
+    background-color:transparent;
+    border-radius: 5px;
+    border: rgb(218, 188, 21) solid 2px;
+    cursor: pointer;
+    font-variant: small-caps;
+    letter-spacing: 2px;
+    position:relative;
+   overflow: hidden;
+   font-family: 'Raleway', sans-serif;
+   z-index: 10;;
 }
+
+.registerButton{
+    margin-top:10px;
+    padding:5px;
+    background-color:transparent;
+    border-radius: 5px;
+    border:rgb(218, 188, 21)solid 2px ;
+    cursor: pointer;
+    font-variant: small-caps;
+    letter-spacing: 2px;
+    position:relative;
+   overflow: hidden;
+   font-family: 'Raleway', sans-serif;
+   z-index: 10;;
+}
+
+.subscribeButton{
+    margin-top:10px;
+    padding:5px;
+    background-color:transparent;
+    border-radius: 5px;
+    border:rgb(81, 192, 79) solid 2px ;
+    cursor: pointer;
+    font-variant: small-caps;
+    letter-spacing: 2px;
+    position:relative;
+   overflow: hidden;
+   font-family: 'Raleway', sans-serif;
+   z-index: 10;;
+}
+
+.connection{
+    margin-top:0;
+    margin-right:50px;
+}
+
+.form button:hover::before, .connection:hover::before{
+    left:0%;
+    transition:ease all 200ms;
+
+}
+
+
+.form button::before, .connection::before{
+    z-index: -1;
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    transition:ease all 200ms;
+    background: rgb(218, 188, 21);
+    width:100%;
+    height:100%;
+}
+
+
+a{
+    text-decoration: none;
+    color:black;
+    
+}
+.disconnect{
+    padding:6px;
+    letter-spacing: 2px;
+    font-variant: small-caps;
+    margin-right:50px;
+    background-color:transparent;
+    border-radius: 5px;
+    border: rgb(202, 35, 35) solid 2px;
+    cursor: pointer;
+    position:relative;
+    overflow: hidden;
+    transition: ease all 200ms;
+    z-index: 10;
+}
+
+
+
+.disconnect::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:-100%;
+    width: 100%;
+    height:100%;
+    background-color: rgb(202, 35, 35) ;
+    transition: ease all 200ms;
+    z-index: -1;
+
+
+    
+}
+
+.disconnect:hover:before{
+    left:0%;
+}
+
+.subscribe {
+    padding:6px;
+    letter-spacing: 2px;
+    font-variant: small-caps;
+    margin-right:50px;
+    background-color:transparent;
+    border-radius: 5px;
+    border: rgb(81, 192, 79) solid 2px;
+    cursor: pointer;
+    position:relative;
+    overflow: hidden;
+    transition: ease all 200ms;
+    z-index: 10;
+}
+
+
+.subscribe::before {
+    content:'';
+    position:absolute;
+    top:0;
+    left:-100%;
+    width: 100%;
+    height:100%;
+    background-color:  rgb(81, 192, 79) ;
+    transition: ease all 200ms;
+    z-index: -1;
+
+
+    
+}
+
+
+.subscribe:hover:before {
+    left:0%;
+}
+
+
+
+
 
 .alert-message{
     margin-top:10px;
@@ -60,4 +247,29 @@
 .icone{
     margin-bottom:20px;
     width:50px;
+}
+
+.logo{
+    margin-left:50px;
+    margin-right:50px;
+    width:50px;
+}
+
+h1{
+    font-family: 'Raleway', sans-serif;
+    margin-right:50px;
+}
+
+@media screen and (max-width:900px){
+
+    .form{
+        width:40%;
+    }
+}
+
+@media screen and (max-width:600px){
+
+    .form{
+        width:70%;
+    }
 }
